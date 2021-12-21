@@ -38,38 +38,125 @@ $registros = $wpdb->get_results($query);
 $path_uploads = wp_get_upload_dir();
 $path_plugins = plugins_url();
 
+
+
+
         // nombre de los campos de la tabla
+
         foreach ($registros as $registros) {
             $result .= 
             '
-            <tr>
-              <th>'.$registros->nint.'</th>
-              <th>'.$registros->date.'</th> 
-              <th><a href="'.$path_uploads['baseurl'].$registros->dir_file_linux.$registros->dir_file.'">Descarga</a></th> 
-              <th><a href="'.get_site_url().'">Detalle</a></th> 
-              <th><a href="'.get_site_url().'/index.php/delete/?id='.$registros->id.'&key_id='.$registros->key_id.'">Borrar</a></th>
-              <th><a href="'.get_site_url().'/index.php/edit/?id='.$registros->id.'&key_id='.$registros->key_id.'">Actualizar</a></th>  
-            </tr>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>
+                                                    '.$registros->nint.'
+                                                </td>
+                                                <td>
+                                                    '.$registros->date.'
+                                                </td>
+                                                <td>
+                                                    <a href="'.$path_uploads['baseurl'].$registros->dir_file_linux.$registros->dir_file.'">Descarga</a>
+                                                </td>
+                                                <td class="center">
+                                                    <a href="'.get_site_url().'">Detalle</a>
+                                                </td>
+                                                <td class="center">
+                                                    <a href="'.get_site_url().'/index.php/delete/?id='.$registros->id.'&key_id='.$registros->key_id.'">Borrar</a>
+                                                </td>
+                                                <td class="center">
+                                                    <a href="'.get_site_url().'/index.php/edit/?id='.$registros->id.'&key_id='.$registros->key_id.'">Actualizar</a>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
             ';
         }
 
-        $template = '<table class="table-data">
-                      <tr>
-                        <th>nint </th>
-                        <th>date </th> 
-                        <th>dir_file </th> 
-                        <th>detalle </th>
-                        <th>Borrar </th>
-                        <th>Actalizar </th>
-                      </tr>
-                      {data}
-                    </table>';
+        $template = '
+
+
+                            <div class="module">
+                                <div class="module-head">
+                                    <h3>
+                                        DataTables</h3>
+                                </div>
+                                <div class="module-body table">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped  display"
+                                        width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Rendering engine
+                                                </th>
+                                                <th>
+                                                    Browser
+                                                </th>
+                                                <th>
+                                                    Platform(s)
+                                                </th>
+                                                <th>
+                                                    Engine version
+                                                </th>
+                                                <th>
+                                                    CSS grade
+                                                </th>
+                                                <th>
+                                                    CSS grade
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        
+{data}
+
+
+                                        <tfoot>
+                                            <tr>
+                                                <th>
+                                                    Rendering engine
+                                                </th>
+                                                <th>
+                                                    Browser
+                                                </th>
+                                                <th>
+                                                    Platform(s)
+                                                </th>
+                                                <th>
+                                                    Engine version
+                                                </th>
+                                                <th>
+                                                    CSS grade
+                                                </th>
+                                                <th>
+                                                    CSS grade
+                                                </th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                    ';
 
         return $content.str_replace('{data}', $result, $template);
 
         echo '</br>';
+        
+
+
+
+
+
+
+
+
 
   }
+
+
+
+
+
+
+
 // Ejecutamos nuestro funcion en WordPress
 //add_action('wp', 'leer_wpdb');
 ?>
