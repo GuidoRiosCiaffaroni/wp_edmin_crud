@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: WP CRUD
+* Plugin Name: WP CRUD EDMIN
 * Description: Ejemplo Basico 
 * Version:     1.3
 * Plugin URI: https://guidorios.cl/wp-basic-crud-plugin-wordpress/
@@ -32,8 +32,6 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/frontend_update.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend_delete.php';
 // Formuario de acceso en frontend
 require_once plugin_dir_path( __FILE__ ) . 'includes/frontend_edit.php';
-// Funciones para grafica de Fecha y Hora 
-require_once plugin_dir_path( __FILE__ ) . 'includes/content/datetimepicker.php';
 // Funciones de seguridad 
 require_once plugin_dir_path( __FILE__ ) . 'includes/security/secure.php';
 // Funciones para la generacion de Blade 

@@ -32,7 +32,7 @@ function Kfp_Insert_form()
 
     $tabla_crud = $wpdb->prefix . $sist_name_file; // objeto base de datos
 
-    echo '-------------------------------------------------------------------------->'.$tabla_crud.'</br>';
+
     /*Incio almacena informacion de formulario BLADE*/
     $user_id        = sanitize_text_field($_POST['user_id']);   // obtiene el id del usuario 
     $key_id         = wp_generate_password( 12, false );        // genera una key para un registro
@@ -91,7 +91,6 @@ function Kfp_Insert_form()
     $wpdb->insert($tabla_crud,$global_data);
 
 
-    echo "---------------------------->".$global_data."</br>";
 
 
     form_insert(); // Formulario Blade 

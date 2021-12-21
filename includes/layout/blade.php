@@ -27,7 +27,7 @@ global $global_data;
         wp_nonce_field('graba_insert', 'insert_nonce');
 
 
-        datetimepicker_header(); // require_once plugin_dir_path( __FILE__ ) . 'includes/content/datetimepicker.php';
+
 
 
 /* ************************************************************************************* */
@@ -113,7 +113,7 @@ echo '
 
 /* ************************************************************************************* */
 
-        datetimepicker_footer(); // require_once plugin_dir_path( __FILE__ ) . 'includes/content/datetimepicker.php';
+   
 
 }
 
@@ -166,7 +166,6 @@ $registros = $wpdb->get_results($query);
         wp_nonce_field('graba_insert', 'insert_nonce');
 
 
-        datetimepicker_header(); // require_once plugin_dir_path( __FILE__ ) . 'includes/content/datetimepicker.php';
 
 
 /* ************************************************************************************* */
