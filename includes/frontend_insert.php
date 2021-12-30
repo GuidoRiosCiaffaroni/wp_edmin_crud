@@ -70,12 +70,17 @@ function Kfp_Insert_form()
                 $dir_file_linux = '/'.date('Y').'/'.date('m').'/'.date('d').'/';                    // ruta de directorio para linux
                 $dir_file_win = '\\'.date('Y').'\\'.date('m').'\\'.date('d').'\\';                  // ruta de directorio para windows
                 $dir_file = $date_time.$_FILES['customFile']['name'];                               // almacena una variable con el nombre del docuemto 
-                $file_name = $user_dirname.$date_time.''.$_FILES['customFile']['name'];             //alamacena una variable con el nombre del documetno y su fecha 
+                $file_name = $user_dirname.$date_time.''.$_FILES['customFile']['name'];             // almacena una variable con el nombre del documetno y su fecha 
                 rename($customFile['file'] , $file_name);                                           // mueve archivos a carpeta creada 
             }
         }
     }
     /* Fin Validacion de infomacion para crear y almacenar archivos*/
+
+
+
+
+
 
     $global_data = array(
                 'user_id'           => $user_id,
