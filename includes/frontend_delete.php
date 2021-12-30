@@ -12,7 +12,7 @@ add_shortcode('kfp_ShortCode_Delete_form', 'Kfp_Delete_form');
 
 /*Inicio funcion para crear shortcode en la pagina de inicio */
 
-global_variable();
+
 
 function Kfp_Delete_form() 
 {

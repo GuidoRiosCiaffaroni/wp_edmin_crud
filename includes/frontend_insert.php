@@ -34,10 +34,10 @@ function Kfp_Insert_form()
 
 
     /*Incio almacena informacion de formulario BLADE*/
-    $user_id        = sanitize_text_field($_POST['user_id']);   // obtiene el id del usuario 
-    $key_id         = wp_generate_password( 12, false );        // genera una key para un registro
-    $nint           = sanitize_text_field($_POST['nint']);      // Obtiene un dato desde el formulario 
-    $date           = sanitize_text_field($_POST['date']);      // Obtiene una fecha desde el formualario
+    $user_id        = sanitize_text_field($_POST['user_id']);           // obtiene el id del usuario 
+    $key_id         = wp_generate_password( 12, false );                // genera una key para un registro
+    $nint           = sanitize_text_field($_POST['nint']);              // Obtiene un dato desde el formulario 
+    $date           = sanitize_text_field($_POST['date']);              // Obtiene una fecha desde el formualario
     $customFile     = wp_upload_bits( $_FILES['customFile']['name'], null, @file_get_contents($_FILES['customFile']['tmp_name'])); // almacena array de archivos 
     $status_id      = '1'; // Obtiene el estatus del registro activo = 1 / desactivado = 0
 
@@ -78,10 +78,6 @@ function Kfp_Insert_form()
     /* Fin Validacion de infomacion para crear y almacenar archivos*/
 
 
-
-
-
-
     $global_data = array(
                 'user_id'           => $user_id,
                 'key_id'            => $key_id,
@@ -98,8 +94,9 @@ function Kfp_Insert_form()
 
 
 
-    form_insert(); // Formulario Blade 
 
+    form_insert(); // Formulario Blade 
+    variables();
 
 }
 ?>

@@ -21,6 +21,9 @@
 defined( 'ABSPATH' ) or die( '¡Sin trampas!' );
 
 /*Importa funciones de instalacion*/
+
+
+
 require_once plugin_dir_path( __FILE__ ) . 'includes/variable.php';
 // Instalacion del Sistema Base de datos
 require_once plugin_dir_path( __FILE__ ) . 'includes/install/install.php';
@@ -47,11 +50,11 @@ require_once(ABSPATH . "wp-admin" . '/includes/media.php');
 require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 
 /*Variables globales*/
-global $wpdb;                   // datos del sistema
+global $wpdb;                   // Datos del sistema
 global $wpbc_db_version;        // Version del base de datos - utilizado para las actualizaciones
 global $sist_name_file;         // Nombre de la tabla de General del sistema 
 global $sist_name_departament;  // Nombre de la tabla de Depart 
-global $tabla_crud;             // nombre de la tabla de sistema
+global $tabla_crud;             // Nombre de la tabla de sistema
 global $user_id;                // ID del usuario
 global $status_user;            // Perfil del usuario 
 global $user_dirname;
