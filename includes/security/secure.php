@@ -27,6 +27,11 @@ function security()
             //header(site_url());
             //wp_redirect( site_url() );
 
+            echo '
+            <script type="text/javascript">
+                window.location.href = "'.get_site_url().'";
+            </script>
+            ';
 
         }
 }

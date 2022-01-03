@@ -130,6 +130,8 @@ echo '
 function form_edit()
 {
 
+security(); // Funcion de Seguridad     
+
 /*Variables globales*/
 global $wpdb;                   // datos del sistema
 global $wpbc_db_version;        // Version del base de datos - utilizado para las actualizaciones

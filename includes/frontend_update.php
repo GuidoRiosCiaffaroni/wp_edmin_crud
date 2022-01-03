@@ -12,8 +12,12 @@ add_shortcode('kfp_ShortCode_Update_form', 'Kfp_Update_form');
 
 /*Inicio funcion para crear shortcode en la pagina de inicio */
 
+
+
 function Kfp_Update_form() 
 {
+
+security(); // Funcion de Seguridad 
 
 /*Variables globales*/
 global $wpdb;                   // datos del sistema

@@ -46,7 +46,17 @@ echo '-> $wpbc_db_version : '.$wpbc_db_version.'</br>';
 echo '-> $sist_name_file : '.$sist_name_file.'</br>';
 echo '-> $sist_name_departament : '.$sist_name_departament.'</br>'; 
 
+echo '</br>'; 
+echo '*********************************************</br>'; 	
+echo '* Variables de URL	                      *</br>'; 	
+echo '*********************************************</br>'; 	
 
+echo '-> get_site_url() : '.get_site_url().'</br>'; 
+echo '-> get_header( \'home\' ) : '.get_header( 'home' ).'</br>';
+echo '-> get_header(site_url()) : '.get_header(site_url()).'</br>';
+echo '-> site_url() : '.site_url().'</br>';
+//echo '-> header(site_url()) : '.header(site_url()).'</br>';
+//echo '-> wp_redirect(site_url()) : '.wp_redirect(site_url()).'</br>';
 
 }
 

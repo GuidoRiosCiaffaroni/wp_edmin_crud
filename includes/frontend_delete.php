@@ -82,8 +82,8 @@ foreach ($registros as $registros)
             )
         );
 
-        // header("Location: http://localhost/wordpress/insert/");
-
+        
+        //variables();
 }
 
 ?>

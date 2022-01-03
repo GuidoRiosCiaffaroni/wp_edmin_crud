@@ -94,9 +94,8 @@ function Kfp_Insert_form()
 
 
 
-
     form_insert(); // Formulario Blade 
-    variables();
+    //variables();
 
 }
 ?>
