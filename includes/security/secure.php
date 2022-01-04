@@ -22,10 +22,7 @@ function security()
 
             echo "<p class='exito'><b>Usuario no validado</b>.<p>";
             $statususer = 0;
-            //get_header( 'home' );
-            //get_header(site_url());
-            //header(site_url());
-            //wp_redirect( site_url() );
+
 
             echo '
             <script type="text/javascript">
