@@ -13,9 +13,10 @@
 */
 
 /******************************************************************************************/
-// Archivo : wp-crud
-// Funcion : 
-
+// archivos     : wp-crud.php
+// Funcion      :  
+// Objetos      : 
+// Descripcion  : Conjunto de variables para el uso del sistema
 /******************************************************************************************/
 
 defined( 'ABSPATH' ) or die( '¡Sin trampas!' );
